@@ -1,0 +1,41 @@
+@mixin spaceAroundContainer{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  margin:0 auto;
+  height:auto;
+  width:100%;
+}
+
+@mixin directCenterContainer{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-flow:column;
+}
+
+@mixin titleCenter{
+  text-align:center;
+  margin-top:50px;
+}
+@mixin titleCenterSpace{
+  text-align:center;
+  margin-top:120px;
+}
+@mixin centerImage{
+  height:250px;
+  width:250px;
+  display:block;
+  margin:0 auto;
+}
+
+@mixin basicSection{
+  float:left;
+  width:100%;
+  background:black;
+}
+@mixin styleLinks{
+  text-decoration:none;
+  padding:20px;
+  display:block;
+}

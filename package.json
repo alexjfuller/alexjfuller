@@ -1,0 +1,17 @@
+{
+  "name": "AlexFuller",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "homepage": "https://alexjfuller.github.io/alexjfuller",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Alex Fuller",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^1.2.0",
+    "node-sass": "^4.9.3"
+  }
+}

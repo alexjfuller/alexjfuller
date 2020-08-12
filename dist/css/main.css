@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: verdana; }
+
+body {
+  overflow-x: hidden;
+  background-color: #383838; }
+
+/********************HEADER*******************/
+header {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 4px solid black; }
+  header h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: white; }
+  header h2 {
+    font-size: 20px;
+    color: white; }
+  header img {
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    width: 85%;
+    z-index: -1;
+    height: 40vh; }
+  header .infoBubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    height: 500px;
+    font-size: 26px;
+    line-height: 50px;
+    z-index: 1; }
+    header .infoBubble i.fas.fa-arrow-alt-circle-down {
+      animation: pulse 0.4s infinite linear alternate;
+      color: white;
+      font-size: 55px; }
+      header .infoBubble i.fas.fa-arrow-alt-circle-down:hover {
+        color: black; }
+
+@keyframes pulse {
+  0% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(12px); } }
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom:3px solid white;
+  background: black; }
+  header nav ul {
+    display: flex; }
+  header nav ul li {
+    text-align: center;
+    list-style: none; }
+  header nav ul li a {
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    color: white; }
+    header nav ul li a:hover {
+      color: black;
+      background: white;
+      transition: 0.3s ease; }
+  header nav .mobile-btn {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background: white;
+    display: none;
+    cursor: pointer; }
+
+/***************ABOUT SECTION*****************/
+#about {
+  border-bottom: 5px solid black; }
+  #about h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: white; }
+  #about h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px; }
+  #about h3 {
+    text-align: center;
+    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 16px; }
+  #about #profilePic {
+    height: 280px;
+    width: 240px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 40px;
+    filter: grayscale(100%);
+    border: 4px solid black;
+    box-shadow: black 0 0 15px; }
+  #about p {
+    text-align: justify;
+    width: 50%;
+    margin: 30px auto;
+    color: white; }
+  #about #skillTitle {
+    text-align: center;
+    margin-top: 120px;
+    color: white; }
+
+#about .skillContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  padding-bottom: 130px;
+  width: 85%; }
+  #about .skillContainer .skillBox {
+    text-align: center;
+    width: 29%;
+    margin-top: 40px; }
+    #about .skillContainer .skillBox h2 {
+      margin-top: 20px; }
+    #about .skillContainer .skillBox h3 {
+      color: white;
+      border-bottom: 4px solid black;
+      padding-bottom: 10px; }
+    #about .skillContainer .skillBox li {
+      text-align: justify;
+      margin: 15px 0;
+      color: white; }
+    #about .skillContainer .skillBox img {
+      height: 250px;
+      width: 250px;
+      display: block;
+      margin: 0 auto;
+      height: 100px;
+      width: 100px;
+      box-shadow: black 0 0 15px;
+      border-radius: 50%;
+      border: solid black 3px;
+      background: white; }
+
+/****************************PROJECT SECTION******************************/
+#work h1 {
+  color: white; }
+
+#work .projectContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  width: 85%;
+  margin-top: 100px; }
+  #work .projectContainer .project {
+    margin: 4%;
+    height: 400px;
+    background: black;
+    transition: 0.5s ease;
+    flex: 0 0 42%;
+    z-index: 0;
+    position: relative;
+    box-shadow: black 0px 0px 20px; }
+    #work .projectContainer .project:hover > .overlay {
+      visibility: visible;
+      opacity: 1;
+      height: 100%;
+      background: rgba(255, 252, 247, 0.9); }
+    #work .projectContainer .project .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: silver;
+      height: 0;
+      z-index: 2;
+      transition: 0.5s ease;
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      line-height: 40px; }
+      #work .projectContainer .project .overlay h3 {
+        font-size: 15px;
+        color: black;
+        margin-top: 10px; }
+      #work .projectContainer .project .overlay a {
+        color: black; }
+    #work .projectContainer .project img {
+      width: 100%;
+      height: 100%;
+      z-index: 1; }
+  #work .projectContainer .projectHover {
+    box-shadow: black 0px 0px 10px;
+    margin: 3%;
+    flex: 1 1 43%; }
+
+#work h1 {
+  text-align: center;
+  margin-top: 120px; }
+
+/***********************CONTACT SECTION**************************/
+#contact {
+  height: 500px; }
+  #contact h1 {
+    color: white; }
+  #contact .contactInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    height: 300px;
+    width: 80%;
+    border: 3px solid black;
+    margin: 50px auto; }
+    #contact .contactInfo h3 {
+      margin: 3%;
+      color: white; }
+  #contact h1 {
+    text-align: center;
+    margin-top: 120px; }
+
+/***************************FOOTER******************************/
+footer {
+  float: left;
+  width: 100%;
+  background: black;
+  height: 70px; }
+  footer p {
+    color: white;
+    text-align: center;
+    margin-top: 30px; }
+
+/***********************FONT ICONS****************************/
+.fas {
+  font-size: 30px; }
+
+i.fas.fa-arrow-alt-circle-down {
+  font-size: 50px;
+  margin-top: 70px;
+  z-index: 1;
+  color: black; }
+  i.fas.fa-arrow-alt-circle-down:hover {
+    cursor: pointer;
+    color: grey; }
+
+a i.fas.fa-arrow-alt-circle-up {
+  font-size: 50px;
+  margin: 10px 0;
+  margin-left: 48%;
+  text-align: center;
+  width: 4%;
+  color: white; }
+  a i.fas.fa-arrow-alt-circle-up:hover {
+    cursor: pointer;
+    color: black; }
+
+/*****************************************MOBILE RESPONSIVE********************************************/
+@media screen and (max-width: 868px) {
+  header h1 {
+    font-size: 20px;
+    margin: 0; }
+  header img {
+    height: auto; }
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 30px; }
+    nav ul {
+      flex: 1 1 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      nav ul li {
+        flex: 1 1 100%; }
+    nav .logo {
+      display: flex; }
+  header nav .mobile-btn {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    background: white;
+    flex: none;
+    display: block;
+    margin-top: 10px; }
+  .items {
+    height: 0px;
+    visibility: hidden;
+    transition: 0.3s ease; }
+    .items li {
+      opacity: 0;
+      transition: 0.1s ease;
+      margin: 0;
+      padding: 0;
+      line-height: 34px;
+      border: 1px solid white; }
+  /***JS Toggle Classes**/
+  .displayMenu {
+    height: 300px;
+    visibility: visible; }
+  li.displayLinks {
+    opacity: 1;
+    margin: 0; }
+  /**Genral Font Sizes**/
+  .items {
+    font-size: 12px; }
+  h1 {
+    font-size: 18px; }
+  h2 {
+    font-size: 15px; }
+  #contact h3 {
+    font-size: 15px; }
+  #about p {
+    width: 75%; }
+  .fas {
+    font-size: 20px;
+    margin: 0; }
+  .infoBubble i.fas.fa-arrow-alt-circle-down {
+    font-size: 15px;
+    margin-top: 30px; }
+  /**General Container Adjustments**/
+  #about h1 {
+    font-size: 20px; }
+  #about p, #about li {
+    font-size: 13px; }
+  #about #profilePic {
+    height: 200px;
+    width: 200px; }
+  #about .skillContainer {
+    width: 75%; }
+    #about .skillContainer .skillBox {
+      flex: 1 1 100%; }
+      #about .skillContainer .skillBox img {
+        width: 100px;
+        height: 100px; }
+  #work p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    line-height: 25px; }
+  .overlay {
+    font-size: 11px;
+    line-height: 0px;
+    display: none;
+    height: auto; }
+  #contact .contactInfo {
+    width: 95%; }
+  #work .projectContainer {
+    width: 100%;
+    height: auto; }
+  #work .projectContainer .project {
+    flex: 1 1 100%;
+    height: 330px;
+    margin-top: 70px; }
+  a i.fas.fa-arrow-alt-circle-up {
+    margin-left: 45%; }
+  #mobileHide {
+    display: none; } }
